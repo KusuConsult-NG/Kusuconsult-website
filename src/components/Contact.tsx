@@ -72,12 +72,27 @@ export default function Contact() {
                         viewport={{ once: true }}
                         className="col-span-1 lg:col-span-2"
                     >
-                        <form className="space-y-6 bg-white p-8 rounded-2xl shadow-xl border border-slate-100">
+                        <form action={async (formData) => {
+                            try {
+                                const { sendContactEmail } = await import('@/app/actions/contact')
+                                const res = await sendContactEmail(formData)
+                                if (res.success) {
+                                    alert('Message sent successfully!')
+                                    // Normally we would reset the form here
+                                } else {
+                                    alert(res.error || 'Failed to send message.')
+                                }
+                            } catch (e) {
+                                alert('An error occurred.')
+                            }
+                        }} className="space-y-6 bg-white p-8 rounded-2xl shadow-xl border border-slate-100">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label className="block text-sm font-semibold text-slate-700 mb-2">Full Name</label>
                                     <input
                                         type="text"
+                                        name="name"
+                                        required
                                         placeholder="John Doe"
                                         className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                     />
@@ -86,6 +101,8 @@ export default function Contact() {
                                     <label className="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
                                     <input
                                         type="email"
+                                        name="email"
+                                        required
                                         placeholder="john@example.com"
                                         className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                     />
@@ -95,6 +112,8 @@ export default function Contact() {
                                 <label className="block text-sm font-semibold text-slate-700 mb-2">Subject</label>
                                 <input
                                     type="text"
+                                    name="subject"
+                                    required
                                     placeholder="Project Inquiry"
                                     className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                 />
@@ -102,14 +121,16 @@ export default function Contact() {
                             <div>
                                 <label className="block text-sm font-semibold text-slate-700 mb-2">Message</label>
                                 <textarea
+                                    name="message"
+                                    required
                                     rows={6}
                                     placeholder="Tell us about your project..."
                                     className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none"
                                 />
                             </div>
                             <button
-                                type="button"
-                                className="w-full bg-primary text-white font-bold py-4 rounded-lg hover:bg-indigo-700 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center justify-center space-x-2"
+                                type="submit"
+                                className="w-full bg-primary text-white font-bold py-4 rounded-lg hover:bg-indigo-700 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                             >
                                 <span>Send Message</span>
                                 <Send className="w-5 h-5" />
