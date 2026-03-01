@@ -42,8 +42,8 @@ export default function About() {
                         className="relative h-[400px] w-full lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl border border-slate-100"
                     >
                         <Image
-                            src="/images/about_office.png"
-                            alt="KusuConsult Diverse Professional Tech Team"
+                            src="/images/about_authentic_team.png"
+                            alt="KusuConsult Office and Professional Team"
                             fill
                             className="object-cover"
                             sizes="(max-width: 768px) 100vw, 50vw"

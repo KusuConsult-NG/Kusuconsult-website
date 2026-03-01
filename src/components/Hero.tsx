@@ -74,8 +74,8 @@ export default function Hero() {
                     <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-2xl rotate-3 opacity-20 blur-xl"></div>
                     <div className="relative w-full h-full bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden flex items-center justify-center">
                         <Image
-                            src="/images/dashboard_ui.png"
-                            alt="KusuConsult Enterprise AI Dashboard"
+                            src="/images/hero_abstract_tech.png"
+                            alt="Nexus AI Analytics Dashboard"
                             fill
                             className="object-cover"
                             priority
