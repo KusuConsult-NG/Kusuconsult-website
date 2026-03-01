@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'KusuConsult | Digital Innovation & Solutions',
   description: 'Transforming businesses with cutting-edge technology, custom software, and strategic consultancy. Welcome to the future.',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/icon.jpeg',
   },
 }
 

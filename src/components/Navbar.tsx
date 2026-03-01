@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const navLinks = [
     { name: 'Services', href: '#services' },
@@ -28,9 +29,20 @@ export default function Navbar() {
             className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-md py-4' : 'bg-transparent py-6'
                 }`}
         >
-            <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-                <Link href="/" className="text-2xl font-bold tracking-tight text-slate-900 group">
-                    Kusu<span className="text-primary group-hover:text-secondary transition-colors">Consult</span>
+            <div className="max-w-7xl mx-auto px-6 flex justify-between items-center w-full">
+                <Link href="/" className="flex items-center gap-3 group">
+                    <div className="relative w-10 h-10 md:w-12 md:h-12 overflow-hidden rounded-md shadow-sm">
+                        <Image
+                            src="/images/logo.jpeg"
+                            alt="KusuConsult Logo"
+                            fill
+                            className="object-cover"
+                            priority
+                        />
+                    </div>
+                    <span className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900">
+                        Kusu<span className="text-primary group-hover:text-secondary transition-colors">Consult</span>
+                    </span>
                 </Link>
 
                 {/* Desktop Menu */}
