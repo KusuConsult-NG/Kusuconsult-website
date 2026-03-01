@@ -1,6 +1,5 @@
 'use client'
 
-import { Github, Twitter, Linkedin, Facebook } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Footer() {
@@ -15,20 +14,6 @@ export default function Footer() {
                         <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
                             Innovating specifically for your success. We build the future of digital interaction with AI, Cloud, and Software solutions.
                         </p>
-                        <div className="flex space-x-4 pt-2">
-                            <a href="#" className="p-2 rounded-full bg-slate-800 hover:bg-primary transition-colors text-slate-300 hover:text-white">
-                                <Github className="w-5 h-5" />
-                            </a>
-                            <a href="#" className="p-2 rounded-full bg-slate-800 hover:bg-primary transition-colors text-slate-300 hover:text-white">
-                                <Twitter className="w-5 h-5" />
-                            </a>
-                            <a href="#" className="p-2 rounded-full bg-slate-800 hover:bg-primary transition-colors text-slate-300 hover:text-white">
-                                <Linkedin className="w-5 h-5" />
-                            </a>
-                            <a href="#" className="p-2 rounded-full bg-slate-800 hover:bg-primary transition-colors text-slate-300 hover:text-white">
-                                <Facebook className="w-5 h-5" />
-                            </a>
-                        </div>
                     </div>
 
                     <div>

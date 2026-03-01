@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { CheckCircle2, Heart, Zap, Shield, Users, Globe2, BookOpen } from 'lucide-react'
+import Image from 'next/image'
 
 export default function About() {
     return (
@@ -32,29 +33,40 @@ export default function About() {
                         </div>
                     </motion.div>
 
-                    {/* Core Values Grid replace image for now to be content heavy as requested */}
+                    {/* Office Image */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
-                        className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+                        className="relative h-[400px] w-full lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl border border-slate-100"
                     >
-                        {[
-                            { title: 'Excellence', desc: 'Uncompromising commitment to quality execution, from code architecture to client support.', icon: Heart, color: 'text-rose-500', bg: 'bg-rose-50' },
-                            { title: 'Innovation', desc: 'Pioneering cutting-edge solutions that anticipate and solve evolving market needs.', icon: Zap, color: 'text-amber-500', bg: 'bg-amber-50' },
-                            { title: 'Integrity', desc: 'Operating with absolute transparency, honesty, and ethical standards in all engagements.', icon: Shield, color: 'text-emerald-500', bg: 'bg-emerald-50' },
-                            { title: 'Collaboration', desc: 'Fostering synergistic partnerships with clients to ensure alignment and shared success.', icon: Users, color: 'text-blue-500', bg: 'bg-blue-50' },
-                        ].map((value, i) => (
-                            <div key={i} className="p-6 bg-white rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                                <div className={`w-10 h-10 rounded-lg ${value.bg} ${value.color} flex items-center justify-center mb-4`}>
-                                    <value.icon className="w-5 h-5" />
-                                </div>
-                                <h4 className="text-lg font-bold text-slate-900 mb-2">{value.title}</h4>
-                                <p className="text-sm text-slate-600">{value.desc}</p>
-                            </div>
-                        ))}
+                        <Image
+                            src="/images/about_office.png"
+                            alt="KusuConsult Diverse Professional Tech Team"
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                        />
                     </motion.div>
+                </div>
+
+                {/* Core Values Section */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {[
+                        { title: 'Excellence', desc: 'Uncompromising commitment to quality execution, from code architecture to client support.', icon: Heart, color: 'text-rose-500', bg: 'bg-rose-50' },
+                        { title: 'Innovation', desc: 'Pioneering cutting-edge solutions that anticipate and solve evolving market needs.', icon: Zap, color: 'text-amber-500', bg: 'bg-amber-50' },
+                        { title: 'Integrity', desc: 'Operating with absolute transparency, honesty, and ethical standards in all engagements.', icon: Shield, color: 'text-emerald-500', bg: 'bg-emerald-50' },
+                        { title: 'Collaboration', desc: 'Fostering synergistic partnerships with clients to ensure alignment and shared success.', icon: Users, color: 'text-blue-500', bg: 'bg-blue-50' },
+                    ].map((value, i) => (
+                        <div key={i} className="p-6 bg-white rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                            <div className={`w-10 h-10 rounded-lg ${value.bg} ${value.color} flex items-center justify-center mb-4`}>
+                                <value.icon className="w-5 h-5" />
+                            </div>
+                            <h4 className="text-lg font-bold text-slate-900 mb-2">{value.title}</h4>
+                            <p className="text-sm text-slate-600">{value.desc}</p>
+                        </div>
+                    ))}
                 </div>
 
                 {/* Community Impact Section */}

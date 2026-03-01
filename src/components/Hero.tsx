@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight, PlayCircle } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Hero() {
     return (
@@ -71,19 +72,14 @@ export default function Hero() {
                     className="relative h-[500px] hidden lg:block"
                 >
                     <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-2xl rotate-3 opacity-20 blur-xl"></div>
-                    <div className="relative w-full h-full bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden flex items-center justify-center p-8">
-                        {/* Simulation of a Dashboard UI */}
-                        <div className="w-full h-full grid grid-rows-3 gap-6">
-                            <div className="grid grid-cols-3 gap-6 h-32">
-                                <div className="col-span-2 bg-slate-50 rounded-xl animate-pulse"></div>
-                                <div className="bg-slate-100 rounded-xl animate-pulse delay-75"></div>
-                            </div>
-                            <div className="bg-slate-50 rounded-xl animate-pulse delay-150"></div>
-                            <div className="grid grid-cols-2 gap-6 h-32">
-                                <div className="bg-indigo-50/50 rounded-xl animate-pulse delay-200"></div>
-                                <div className="bg-slate-50 rounded-xl animate-pulse delay-300"></div>
-                            </div>
-                        </div>
+                    <div className="relative w-full h-full bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden flex items-center justify-center">
+                        <Image
+                            src="/images/dashboard_ui.png"
+                            alt="KusuConsult Enterprise AI Dashboard"
+                            fill
+                            className="object-cover"
+                            priority
+                        />
                     </div>
                 </motion.div>
 
