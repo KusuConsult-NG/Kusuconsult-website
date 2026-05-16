@@ -7,9 +7,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const navLinks = [
-    { name: 'Services', href: '#services' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Services', href: '/#services' },
+    { name: 'About', href: '/#about' },
+    { name: 'Contact', href: '/#contact' },
 ]
 
 export default function Navbar() {

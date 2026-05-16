@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   },
 }
 
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
+
 export default function RootLayout({
   children,
 }: {
@@ -21,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${outfit.variable} font-sans antialiased bg-[#030014] text-white overflow-y-scroll overflow-x-hidden`}>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   )
