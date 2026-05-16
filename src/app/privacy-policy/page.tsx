@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
             Privacy <span className="text-primary">Policy</span>
           </h1>
-          <p className="text-slate-400">Operation Rainbow Security Incident Management System</p>
+          <p className="text-slate-400">Rainbow EWER Security Incident Management System</p>
           <div className="mt-6 h-1 w-20 bg-primary mx-auto rounded-full"></div>
         </header>
 
@@ -21,7 +21,7 @@ export default function PrivacyPolicy() {
             </h2>
             <div className="space-y-4 leading-relaxed">
               <p>
-                Operation Rainbow is committed to protecting the privacy, confidentiality, and security of all users of the Operation Rainbow Security Incident Management System (“the Platform”).
+                Rainbow EWER is committed to protecting the privacy, confidentiality, and security of all users of the Rainbow EWER Security Incident Management System (“the Platform”).
               </p>
               <p>This Privacy Policy explains:</p>
               <ul className="list-disc pl-6 space-y-2 text-slate-400">
@@ -44,7 +44,7 @@ export default function PrivacyPolicy() {
               Purpose of the Platform
             </h2>
             <div className="space-y-4 leading-relaxed">
-              <p>The Operation Rainbow Security Incident Management System is designed to:</p>
+              <p>The Rainbow EWER Security Incident Management System is designed to:</p>
               <ul className="list-disc pl-6 space-y-2 text-slate-400">
                 <li>Enable citizens to report emergencies and security incidents</li>
                 <li>Support real-time response coordination</li>
@@ -140,12 +140,12 @@ export default function PrivacyPolicy() {
             <div className="space-y-4">
               <p>Information may be shared only with:</p>
               <ul className="list-disc pl-6 space-y-2 text-slate-400">
-                <li>Authorized Operation Rainbow personnel</li>
+                <li>Authorized Rainbow EWER personnel</li>
                 <li>Assigned security response officers</li>
                 <li>Relevant government or law enforcement agencies where required by law</li>
               </ul>
               <p className="font-semibold text-white pt-2">
-                Operation Rainbow does not sell user information to third parties.
+                Rainbow EWER does not sell user information to third parties.
               </p>
             </div>
           </section>
