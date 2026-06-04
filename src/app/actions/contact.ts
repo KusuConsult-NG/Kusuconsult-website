@@ -21,13 +21,13 @@ export async function sendContactEmail(formData: FormData) {
         if (!resend) {
             // Simulate network delay
             await new Promise(resolve => setTimeout(resolve, 1000))
-            console.log(`[DEV MODE] Simulated sending email to admin@kusuconsult.com. Subj: ${subject}`)
+            console.log(`[DEV MODE] Simulated sending email to admin@kusuconsult.com and copy to kusuconsult@gmail.com. Subj: ${subject}`)
             return { success: true }
         }
 
         const { data, error } = await resend!.emails.send({
             from: 'KusuConsult Website <noreply@kusuconsult.com>', // Requires verified domain on Resend
-            to: ['admin@kusuconsult.com'],
+            to: ['admin@kusuconsult.com', 'kusuconsult@gmail.com'],
             subject: `New Contact Form Submission: ${subject}`,
             html: `
                 <h2>New Message from KusuConsult Contact Form</h2>
