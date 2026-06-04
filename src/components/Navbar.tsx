@@ -8,6 +8,7 @@ import Image from 'next/image'
 
 const navLinks = [
     { name: 'Services', href: '/#services' },
+    { name: 'Rainbow EWER', href: '/#ewer' },
     { name: 'About', href: '/#about' },
     { name: 'Contact', href: '/#contact' },
 ]
