@@ -80,7 +80,7 @@ export default function PrivacyPolicy() {
         {/* ── Page Header ── */}
         <header className="mb-16 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-            Master&nbsp;<span className="text-primary">Privacy&nbsp;Policy</span>
+            <span className="text-primary">Privacy&nbsp;Policy</span>
           </h1>
           <p className="text-slate-400">KusuConsult — Digital Innovation &amp; Solutions</p>
           <div className="mt-6 h-1 w-20 bg-primary mx-auto rounded-full" />
